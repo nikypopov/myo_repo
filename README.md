@@ -4,7 +4,7 @@
 [x] files and instructions to set up the MyoSuite environment 
 
 [x] run pretrained baselines
-  - run test_myosuite_baselines.py to visualize some of the pre trained baselines (at the end of script be sure to uncomment environment/task you want to render)
+  - run ```test_myosuite_baselines.py``` or ```pretrained_deprl_walk.py``` to visualize some of the pre trained baselines (at the end of script be sure to uncomment environment/task you want to render)
 
 [ ] train agents with depRL
   - updates: https://github.com/martius-lab/depRL/issues/6 https://github.com/MyoHub/myosuite/issues/185
