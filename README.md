@@ -15,7 +15,7 @@ To set up the conda environment for MyoSuite, follow the steps below:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/yourrepository.git](https://github.com/nikypopov/rl_myosuite.git
+    git clone https://github.com/nikypopov/rl_myosuite.git
     cd rl_myosuite
     ```
 
