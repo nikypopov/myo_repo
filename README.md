@@ -1,13 +1,12 @@
-# MyoSuite Environment Setup
+# MyoSuite Setup
 
 
 [x] files and instructions to set up the MyoSuite environment 
-[x] run pretrained baselines
 
+[x] run pretrained baselines
   - run test_myosuite_baselines.py to visualize some of the pre trained baselines (at the end of script be sure to uncomment environment/task you want to render)
 
 [ ] train agents with depRL
-
   - updates: https://github.com/martius-lab/depRL/issues/6 https://github.com/MyoHub/myosuite/issues/185
 
 ## Setting Up the Conda Environment
