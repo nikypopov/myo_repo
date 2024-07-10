@@ -43,7 +43,7 @@ To set up the conda environment for MyoSuite, follow the steps below:
 
 ## Additional Information
 
-[MyoSuite Docs]((https://myosuite.readthedocs.io/en/latest/index.html).
+[MyoSuite Docs](https://myosuite.readthedocs.io/en/latest/index.html).
 [DepRL Docs](https://deprl.readthedocs.io/en/latest/index.html)
 
 ---
