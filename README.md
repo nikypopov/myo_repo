@@ -1,4 +1,3 @@
-# MyoSuite Challenge Setup
 ## quick to-dos
 [x] setup and pretrained baselines
 
