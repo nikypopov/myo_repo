@@ -57,5 +57,7 @@ use the myoLegOSLWalk.yaml configuration file to train a deprl agent [deprl conf
 [MyoSuite Docs](https://myosuite.readthedocs.io/en/latest/index.html).
 [DepRL Docs](https://deprl.readthedocs.io/en/latest/index.html)
 [DepRL Paper](https://arxiv.org/pdf/2206.00484)
+[TonicRL Github](https://github.com/fabiopardo/tonic)
+
 
 ---
