@@ -39,6 +39,12 @@ To set up the conda environment for MyoSuite, follow the steps below:
 
 Script to render locomotion challenge environment and test policy
 
+## train deprl agent for locomtioan challenge
+use the myoLegOSLWalk.yaml configuration file to train a deprl agent [deprl config file docs](https://deprl.readthedocs.io/en/latest/config_files.html)
+  ```bash
+    python -m deprl.main myoLegOSLWalk.yaml
+  ```
+
 ## examples
 
 - run ```pretrained_deprl_walk.py``` or ```test_myosuite_baselines.py``` to visualize some of the pre trained baselines (at the end of script be sure to uncomment environment/task you want to render)
