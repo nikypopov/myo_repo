@@ -19,7 +19,7 @@ To set up the conda environment for MyoSuite, follow the steps below:
     ```
 
 2. **Create the Conda Environment**:
-    Use the `MyoSuite.yml` file to create the conda environment.
+    Use the `environment_config.yaml` file to create the conda environment.
     ```bash
     conda env create -f environment_config.yaml
     ```
@@ -39,7 +39,7 @@ To set up the conda environment for MyoSuite, follow the steps below:
 
 Script to render locomotion challenge environment and test policy
 
-## train deprl agent for locomtioan challenge
+## myoLegOSLWalk.yaml
 use the myoLegOSLWalk.yaml configuration file to train a deprl agent [deprl config file docs](https://deprl.readthedocs.io/en/latest/config_files.html)
   ```bash
     python -m deprl.main myoLegOSLWalk.yaml
