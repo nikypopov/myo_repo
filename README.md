@@ -3,7 +3,9 @@
 
 [x] train agents with depRL
   - updates: https://github.com/martius-lab/depRL/issues/6 https://github.com/MyoHub/myosuite/issues/185
-  - currently training
+  - re-train and fine tune
+
+[ ] tune reward function
     
 [ ] train vanilla agents
   - PPO, but train for much longer
