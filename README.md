@@ -1,7 +1,7 @@
 ## quick to-dos
 [x] setup and pretrained baselines
 
-[ ] train agents with depRL
+[x] train agents with depRL
   - updates: https://github.com/martius-lab/depRL/issues/6 https://github.com/MyoHub/myosuite/issues/185
   - currently training
     
