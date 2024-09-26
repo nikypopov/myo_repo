@@ -1,2 +1,4 @@
 baselines_DEPRL/
 .DS_Store
+test.py
+training_data_*/
