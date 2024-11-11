@@ -4,7 +4,7 @@ import torch.multiprocessing as mp
 from datetime import datetime
 import myosuite
 from myosuite.utils import gym
-from stable_baselines3 import PPO, A2C, DQN, DDPG, SAC
+from stable_baselines3 import PPO, A2C, TD3, DDPG, SAC
 from stable_baselines3.common.logger import configure
 from stable_baselines3.common.callbacks import BaseCallback
 import numpy as np
@@ -35,14 +35,14 @@ class Agent:
             self.model = PPO("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
         elif algo == "A2C":
             self.model = A2C("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
-        elif algo == "DQN":
-            self.model = DQN("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
+        elif algo == "TD3":
+            self.model = TD3("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
         elif algo == "DDPG":
             self.model = DDPG("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
         elif algo == "SAC":
             self.model = SAC("MlpPolicy", env, verbose=1, device=device, tensorboard_log=log_dir)
         else:
-            print("Invalid algorithm chosen. Please choose from PPO, A2C, DQN, DDPG, or SAC.")
+            print("Invalid algorithm chosen. Please choose from PPO, A2C, TD3, DDPG, or SAC.")
             return
 
         # If log_dir is provided, configure the logger for Tensorboard and CSV
@@ -118,7 +118,7 @@ def train_on_single_gpu(env_name, reset, train_steps, algo, gpu_id, reward_logs,
     reward_logs[algo] = locomotion_model.get_training_rewards()
 
 def sequential_training(env, train_steps, device, log_dir=None):
-    algorithms = ["PPO", "A2C", "DQN", "DDPG", "SAC"]
+    algorithms = ["PPO", "A2C", "TD3", "DDPG", "SAC"]
     total_rewards = {}
     reward_logs = {}  # To store reward logs for each algorithm
 
@@ -140,7 +140,7 @@ def sequential_training(env, train_steps, device, log_dir=None):
     return total_rewards
 
 def parallel_training(env_name, reset, train_steps, num_gpus, log_dir=None):
-    algorithms = ["PPO", "A2C", "DQN", "DDPG", "SAC"]
+    algorithms = ["PPO", "A2C", "TD3", "DDPG", "SAC"]
     mp.set_start_method('spawn', force=True)  # For CUDA compatibility
     reward_logs = mp.Manager().dict()  # Shared dictionary for reward logs across processes
 
@@ -189,7 +189,7 @@ if __name__ == "__main__":
     # environment and reset parameters
     env_name = 'myoChallengeRunTrackP1-v0'
     reset = 'init'
-    train_steps = 5000000  # Train for 5,000,000 steps for each algorithm
+    train_steps = 100000  # Train for 5,000,000 steps for each algorithm
     log_dir = create_output_dir()  # Log directory for both Tensorboard and CSV logging
 
     if torch.cuda.is_available() or torch.backends.mps.is_available():

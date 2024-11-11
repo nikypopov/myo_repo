@@ -47,7 +47,7 @@ def test_myolegwalk():
 def test_chasetag():
     name = "myoChallengeChaseTagP1-v0"
     env = gym.make(name, reset_type="random")
-    env.seed(SEED)
+    env.seed(SEED)c
     returns, qpos = helper_env_loop(env)
     print(np.mean(qpos))
     # assert np.mean(qpos) < -1.5
@@ -118,8 +118,8 @@ def test_chasetag_actionrng():
 
 
 if __name__ == "__main__":
-    test_relocate()
-    #test_myolegwalk()
+    #test_relocate()
+    test_myolegwalk()
     #test_chasetag()
     # test_chasetag_actionrng()
     # test_chasetag_obs_rng()

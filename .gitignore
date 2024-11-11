@@ -2,3 +2,7 @@ baselines_DEPRL/
 .DS_Store
 test.py
 training_data_*/
+archive
+scratch.py
+DEPRL*
+pyrightconfig.json
